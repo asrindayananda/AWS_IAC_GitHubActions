@@ -24,7 +24,7 @@ jobs:
     steps:
     
       # Name of step
-      - name: Start AWS EC2
+      - name: Stop AWS EC2
         # Run AWS Command on the GitHub Hosted runner which stops the instance using AWS authentication stored in GitHub Secrets (see below how to add)
         run: |
           aws ec2 stop-instances --instance-ids ${{secrets.AWS_EC2_INSTANCE_ID }}
